@@ -9,7 +9,13 @@ export default (function data() {
         return notes;
     }
 
-    return {
-        get: get
+    function add() {
+        notes.push([])
     }
+
+    return {
+        get: get,
+        add: add
+    }
+
 })();

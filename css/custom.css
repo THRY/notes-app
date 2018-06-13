@@ -1,33 +1,44 @@
 body {
   font-family: 'Roboto', sans-serif;
   display: flex;
+  position: relative;
   flex-direction: row;
   flex-wrap: wrap;
   max-width: 650px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 15px; }
+
+*:focus {
+  outline: none; }
+
+button {
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 0.2em 1em;
+  border-radius: 3px; }
+  button:hover {
+    background-color: #cfcfcf; }
+  button:active {
+    background-color: #8a8a8a; }
+
+header.blur,
+main.blur {
+  filter: blur(5px); }
 
 header {
   display: block;
   position: relative;
   width: 100%;
   height: 150px; }
+  header button.create {
+    position: absolute;
+    top: 15px;
+    right: 0; }
   header .title {
     display: block;
     position: relative;
     margin: 0;
     top: 3px; }
-  header p.style-switcher {
-    display: inline-block;
-    position: absolute;
-    top: 15px;
-    right: 0;
-    margin: 0; }
-    header p.style-switcher span {
-      cursor: pointer; }
-      header p.style-switcher span.active {
-        text-decoration: underline; }
-    header p.style-switcher span:nth-child(2) {
-      margin: 0 0.4em; }
   header .filters {
     position: absolute;
     bottom: 0;
@@ -43,4 +54,51 @@ main {
   width: 100%;
   flex-grow: 1;
   height: 500px;
-  background-color: red; }
+  align-self: stretch;
+  position: relative; }
+  main p.style-switcher {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0; }
+    main p.style-switcher span {
+      cursor: pointer; }
+      main p.style-switcher span.active {
+        text-decoration: underline; }
+    main p.style-switcher span:nth-child(2) {
+      margin: 0 0.4em; }
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(199, 199, 199, 0.85);
+  z-index: 999; }
+  .modal .container {
+    max-width: 650px;
+    margin: 0 auto;
+    position: relative; }
+    .modal .container label {
+      display: block;
+      font-weight: bold; }
+    .modal .container input,
+    .modal .container textarea {
+      width: 100%;
+      border: 0px;
+      margin-bottom: 1em;
+      padding: 0.2em; }
+    .modal .container input {
+      height: 1.5em; }
+    .modal .container p.close {
+      cursor: pointer;
+      text-align: right; }
+      .modal .container p.close:hover {
+        text-decoration: underline; }
+    .modal .container button.save {
+      position: absolute;
+      right: 0; }
