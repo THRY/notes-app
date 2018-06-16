@@ -17,6 +17,15 @@ let controller = (function() {
         $('.modal').fadeOut(50);
     }); 
 
+    $('.modal .save').click(function() {
+        var entry = {}
+        entry.title = $('.modal #title').val(); 
+        entry.description = $('.modal #description').val(); 
+        entry.id = Math.floor((Math.random() * 1000000) + 1);
+        data.add(entry);
+    }); 
+
+
     $(window).on('load', function() {
         console.log(data.get('all')); 
         window.localStorage.setItem('123', JSON.stringify({ title: 'papipao', description: "", importance: "", until: "" }));

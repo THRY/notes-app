@@ -91,9 +91,11 @@ main {
       width: 100%;
       border: 0px;
       margin-bottom: 1em;
-      padding: 0.2em; }
+      padding: 0.5em;
+      border-radius: 3px;
+      box-sizing: border-box; }
     .modal .container input {
-      height: 1.5em; }
+      height: 2em; }
     .modal .container p.close {
       cursor: pointer;
       text-align: right; }

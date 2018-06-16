@@ -1,16 +1,11 @@
 export default (function data() {
     
-    var notes = [
-        { title: 'papipao', description: "", importance: "", until: "" },
-        { title: 'kaka', description: "", importance: "", until: "" },
-    ];
-
-    function get(type) {
-        return notes;
+    function add(item) {
+        window.localStorage.setItem(item.id, JSON.stringify(item));
     }
 
-    function add() {
-        notes.push([])
+    function get(id) {
+        return  JSON.parse(window.localStorage.getItem(id));
     }
 
     return {
