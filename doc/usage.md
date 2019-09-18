@@ -1,6 +1,7 @@
 [HTML5 Boilerplate homepage](https://html5boilerplate.com/) | [Documentation
 table of contents](TOC.md)
 
+# Hello, this is some change =)
 # Usage
 
 The most basic usage of HTML5 Boilerplate is to create a static site or simple
